@@ -1,0 +1,45 @@
+<div class="container">
+    <h1 class="has-underline">Configuration</h1>
+    <h2 class="black-text">Keyword</h2>
+    <form name="myForm" novalidate>
+        <input ng-model="model.keyword" name="keyword" type="text" placeholder="Input keyword..."
+               required autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+        <button type="submit" ng-click="model.updateText(model.keyword)">update</button>
+    </form>
+    <div ng-app="webapp">
+        <table class="update-table">
+            <tr>
+                <td ng-class="{highlight: model.index == $index}" ng-repeat="l in model.letterArr">{{ l }}</td>
+            </tr>
+            <tr>
+                <td ng-class="{highlight: model.index == $index}" ng-repeat="i in model.letterInd">{{ i }}</td>
+            </tr>
+        </table>
+    </div>
+    <h1 class="has-underline">Encoding</h1>
+    <h2 class="black-text">Source Text</h2>
+    <div ng-app="webapp">
+        <table class="encode-table">
+            <tr>
+                <td ng-repeat="l in model.alphabet">
+                    <button class="letter-button" ng-click="model.displayChosenLetters(l, $index)" type="submit">{{ l }}</button>
+                </td>
+            </tr>
+            <tr>
+                <td ng-repeat="c in model.charArr">{{ c }}</td>
+            </tr>
+        </table>
+    </div>
+    <form name="myForm" novalidate>
+        <div id="first">
+            <textarea rows="1" class="chosen-letter" type="text">{{ model.res }}</textarea>
+        </div>
+        <div id="second">
+            <button ng-click="model.clearText()" type="submit">clear</button>
+        </div>
+    </form>
+    <h2 class="cipher-text">Cipher Text</h2>
+    <form name="myForm" novalidate>
+        <textarea rows="1" class="cipher-letter" type="text">{{ model.cipherRes }}</textarea>
+    </form>
+</div>

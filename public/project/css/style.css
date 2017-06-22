@@ -1,0 +1,51 @@
+.has-underline {
+    color: grey;
+    text-decoration: underline;
+}
+.black-text {
+    color: black;
+}
+
+table {
+    text-transform: uppercase;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+th, td {
+    height: 30px;
+    width: 80px;
+}
+
+.update-table {
+    margin-top: 30px;
+}
+
+textarea {
+    margin-top: 10px;
+}
+
+.cipher-text {
+    padding-top: 50px;
+}
+
+#first {
+    float: left;
+}
+#second {
+    padding-left: 5px;
+    padding-top: 11px;
+    float: left;
+}
+
+.highlight {
+    background-color: deepskyblue;
+}
+
+.letter-button:hover {
+    background-color: lightskyblue;
+}
